@@ -30,9 +30,9 @@ const ServicesCards = ({ index, title, icon }) => {
   )
 }
 ServicesCards.propTypes = {
-  index: PropTypes.string,
+  index: PropTypes.number,
   title: PropTypes.string,
-  icon: PropTypes.object,
+  icon: PropTypes.string,
 }
 
 const About = () => {

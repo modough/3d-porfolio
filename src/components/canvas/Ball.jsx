@@ -45,11 +45,11 @@ const BallCanvas = ({ icon }) => {
   )
 }
 Ball.propTypes = {
-  imgUrl: PropTypes.object,
+  imgUrl: PropTypes.string,
 
 }
 BallCanvas.propTypes = {
-  icon: PropTypes.object,
+  icon: PropTypes.string,
 }
 
 export default BallCanvas

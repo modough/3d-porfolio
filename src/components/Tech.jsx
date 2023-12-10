@@ -7,7 +7,7 @@ import BallCanvas from "./canvas/Ball";
 const Tech = () => {
   return (
     <div
-      className="flex flex-row flex-wrap"
+      className="flex flex-row flex-wrap mb-2"
     >
       {technologies.map((tech) => {
         return (

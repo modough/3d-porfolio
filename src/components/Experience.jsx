@@ -72,7 +72,7 @@ const Experience = () => {
   )
 }
 ExperienceCard.propTypes = {
-  experience: PropTypes.string,
+  experience: PropTypes.object,
 
 }
 export default Sectionwrapper(Experience, 'work')
