@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav
       className={`${styles.paddingX} p-10
       w-full flex items-center justify-center
-      py-5 fixed top-0 z-20 bg-primary`}
+      py-5 fixed top-0 z-20 bg-primary/80 `}
     >
       <div className="w-full flex items-center justify-between max-w-7xl mw-auto">
         <Link to='/'
@@ -30,13 +30,14 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`${active === link.title ? "text-white" : "text-secondary"}
-                hover:text-white 
+              className={`${active === link.title ? "text-orange-100" : "text-white"}
+                hover:text-orange-100 
                 text-[18px] 
                 font-meduim 
                 cursor-pointer`
               }
               onClick={() => setActive(link.title)}
+              onKeyDown=''
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
@@ -60,7 +61,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <li
                   key={link.id}
-                  className={`${active === link.title ? "text-white" : "text-secondary"}
+                  className={`${active === link.title ? "text-secondary" : "text-white"}
                 hover:text-white 
                 text-[16px]
                 font-poppins 

@@ -11,9 +11,8 @@ import PropTypes from "prop-types";
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
-
-      contentStyle={{ background: '#1d1836', color: '#fff' }}
-      contentArrowStyle={{ borderRight: '7px solid #232631' }}
+      contentStyle={{ background: '#e94100', color: '#fff' }}
+      contentArrowStyle={{ borderRight: '7px solid #e94100' }}
       data={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
