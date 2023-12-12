@@ -6,16 +6,16 @@ import Loader from "../Loader";
 import PropTypes from "prop-types";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./desktop_pc/scene.gltf');
+  const computer = useGLTF('./gaming_setup/scene.gltf');
   return (
     <mesh>
       <hemisphereLight intensity={2} groundColor="black" />
       <pointLight intensity={2} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={isMobile ? 25 : 40}
+        position={isMobile ? [0, -3.8, -1.8] : [2.5, -3.25, -2.5]}
+        rotation={[0, 2, -0.01]}
       />
     </mesh>
   )
@@ -23,7 +23,7 @@ const Computers = ({ isMobile }) => {
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width:500px)');
+    const mediaQuery = window.matchMedia('(max-width:768px)');
     setIsMobile(mediaQuery.matches);
     const handlemediaQuery = (e) => {
       setIsMobile(e.matches);
@@ -43,8 +43,8 @@ const ComputersCanvas = () => {
       <Suspense fallback={<Loader />}>
         <OrbitControls
           enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI / 3}
+          minPolarAngle={Math.PI / 3}
         />
         <Computers isMobile={isMobile} />
       </Suspense>

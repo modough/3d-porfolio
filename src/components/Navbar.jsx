@@ -37,7 +37,7 @@ const Navbar = () => {
                 cursor-pointer`
               }
               onClick={() => setActive(link.title)}
-              onKeyDown=''
+              onKeyDown={((e) => console.log(e.target.value))}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>

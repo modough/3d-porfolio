@@ -11,7 +11,7 @@ const FeedbackCard = ({ index, testimonial, name, designation, company, image })
   return (
     <motion.div
       variants={fadeIn("", "spring", index * .5, .75)}
-      className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full'
+      className='bg-black-200 p-10 rounded-3xl w-full'
     >
       <p className='text-white font-black text-[48px]'>
         {'"'}
@@ -27,7 +27,7 @@ const FeedbackCard = ({ index, testimonial, name, designation, company, image })
               {name}
             </p>
             <p className='mt-1 text-secondary text-[12px]'>
-              {designation} of {company}
+              {designation} chez {company}
             </p>
           </div>
           <img
@@ -60,7 +60,7 @@ const Feedbacks = () => {
           >Recommandations</h2>
         </motion.div>
       </div>
-      <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 `}>
+      <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7 flex-col`}>
         {testimonials.map((test, i) => (
           <FeedbackCard
             key={test.name}
@@ -73,7 +73,7 @@ const Feedbacks = () => {
   )
 }
 FeedbackCard.propTypes = {
-  index: PropTypes.string,
+  index: PropTypes.number,
   testimonial: PropTypes.string,
   name: PropTypes.string,
   designation: PropTypes.string,

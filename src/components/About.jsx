@@ -38,10 +38,10 @@ ServicesCards.propTypes = {
 const About = () => {
   return (
     <>
-      <div className='flex flex-row gap-5'>
+      <div className='absolute flex flex-row gap-5'>
         <div className='flex flex-col justify-center items-center'>
           <div className='w-5 h-5 rounded-full bg-[#E94100]' />
-          <div className='w-1 h-40 sm:h-80 orange-gradient' />
+          <div className='w-1 h-60 sm:h-80 orange-gradient' />
         </div>
         <div>
           <motion.div
@@ -68,7 +68,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='pt-80 pl-10 mt-20 flex flex-wrap gap-10'>
         {services.map((service, i) =>
           <ServicesCards key={service.title} index={i} {...service} />
         )}

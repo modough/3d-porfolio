@@ -17,7 +17,6 @@ const Ball = (props) => {
         <meshStandardMaterial
           color="#fff8eb"
           polygonOffsetFactor={-5}
-          flatShading
         />
         <Decal
           position={[0, 0, 1]}
@@ -37,6 +36,8 @@ const BallCanvas = ({ icon }) => {
       <Suspense fallback={<Loader />}>
         <OrbitControls
           enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
         />
         <Ball imgUrl={icon} />
       </Suspense>

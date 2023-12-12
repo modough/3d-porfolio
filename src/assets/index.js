@@ -25,10 +25,16 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import foneke from "./company/foneke.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import projet3 from "./projet3.png";
+import projet6 from "./projet6.png";
+import projet7 from "./projet7.png";
+import danyl from "./danyl.jpg";
+import leo from "./leo.jpg";
 
 export {
   logo,
@@ -56,7 +62,13 @@ export {
   shopify,
   starbucks,
   tesla,
+  foneke,
   carrent,
   jobit,
   tripguide,
+  projet3,
+  projet6,
+  projet7,
+  danyl,
+  leo
 };

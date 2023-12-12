@@ -11,8 +11,9 @@ import PropTypes from "prop-types";
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: '#e94100', color: '#fff' }}
-      contentArrowStyle={{ borderRight: '7px solid #e94100' }}
+      date={experience.date}
+      contentStyle={{ background: '#1A2954', color: '#fff' }}
+      contentArrowStyle={{ borderRight: '7px solid #1A2954' }}
       data={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -52,15 +53,21 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div
-        variants={textVariant()}
-      >
-        <p className={`${styles.sectionSubText} `}>
-          Ce que j&lsquo;ai fait jusqu&lsquo;a présent
-        </p>
-        <h2 className={`${styles.sectionHeadText} fontSize`}>Mes expériences.</h2>
-      </motion.div>
-      <div className="mt-20 flex flex-col">
+      <div className='absolute flex flex-row gap-5'>
+        <div className='flex flex-col justify-center items-center'>
+          <div className='w-5 h-5 rounded-full bg-[#E94100]' />
+          <div className='w-1 h-40 sm:h-80 orange-gradient' />
+        </div>
+        <motion.div
+          variants={textVariant()}
+        >
+          <p className={`${styles.sectionSubText} `}>
+            Ce que j&lsquo;ai fait jusqu&lsquo;a présent
+          </p>
+          <h2 className={`${styles.sectionHeadText} fontSize`}>Mes expériences.</h2>
+        </motion.div>
+      </div>
+      <div className="pt-40 mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, i) => (
             <ExperienceCard key={i} experience={experience} />

@@ -48,7 +48,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           <h3 className='text-white text-[24px] font-bold'>{name}</h3>
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>
-        <div className='mt-4 flex flex-wrap gap-2'>
+        <div className='mt-4 flex flex-wrap gap-2 overflow-hidden h-[21px]'>
           {tags.map((tag) => (
             <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
           ))}
@@ -62,7 +62,7 @@ const Works = () => {
   return (
     <>
       <div className='flex flex-row gap-5'>
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-start items-center'>
           <div className='w-5 h-5 rounded-full bg-[#E94100]' />
           <div className='w-1 h-40 sm:h-80 orange-gradient' />
         </div>

@@ -19,10 +19,13 @@ import {
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
+    danyl,
+    leo,
     threejs,
+    projet3,
+    projet6,
+    projet7,
+    foneke
 
 } from "../assets";
 
@@ -118,9 +121,9 @@ const technologies = [
 const experiences = [
     {
         title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#383E56",
+        company_name: "Fonéke",
+        icon: foneke,
+        iconBg: "#E6DEDD",
         date: "March 2020 - April 2021",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
@@ -130,8 +133,8 @@ const experiences = [
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
+        title: "Web Developer frontend",
+        company_name: "Groupe Up",
         icon: tesla,
         iconBg: "#E6DEDD",
         date: "Jan 2021 - Feb 2022",
@@ -173,93 +176,93 @@ const experiences = [
 const testimonials = [
     {
         testimonial:
-            "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-        name: "Sara Lee",
-        designation: "CFO",
-        company: "Acme Co",
-        image: "https://randomuser.me/api/portraits/women/4.jpg",
+            "Mouhamed est l’un des meilleurs étudiants que j’ai eu plaisir à suivre durant son bachelor de développeur web au sein de OpenClassrooms. Il a su s’adapter aux différents challenges et relever tous les défis pour réussir ses projets avec brio en fournissant un travail de haute qualité. Autonome, rigoureux et bon communicant, Mouhamed est un bon développeur, passionné, qui a su démontrer toutes ses qualités au fil de son avancée au sein de la formation. De plus, il dispose de véritables qualités humaines qui font qu'il est toujours prêt à aider les autres et à prendre des initiatives. C’est pour toutes ces qualités que je recommande Mouhamed !",
+        name: "Danyl Semmache",
+        designation: "Scrum Master",
+        company: "OC",
+        image: danyl,
     },
     {
         testimonial:
-            "I've never met a web developer who truly cares about their clients' success like Rick does.",
-        name: "Chris Brown",
-        designation: "COO",
+            "I've never met a web developer who truly cares about their clients' success like Mouhamed does.",
+        name: "Leo Grambert",
+        designation: "Développeur Front",
         company: "DEF Corp",
-        image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-        testimonial:
-            "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-        name: "Lisa Wang",
-        designation: "CTO",
-        company: "456 Enterprises",
-        image: "https://randomuser.me/api/portraits/women/6.jpg",
+        image: leo,
     },
 ];
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Kanap",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "Web-based platform that allows users to select, and add to cart various new design sofas.",
+        tags: [
+            {
+                name: "Javascript",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Html",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Css",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: projet3,
+        source_code_link: "https://github.com/modough/kanap",
+    },
+    {
+        name: "Senbooking",
+        description:
+            "Web application that enables users to search for hotels rooms availabilities, view estimated prices, and book on their current location.",
         tags: [
             {
                 name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "MongoDb",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "NodeJs",
                 color: "pink-text-gradient",
             },
+            {
+                name: "Express",
+                color: "orange-text-gradient",
+            },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: projet6,
+        source_code_link: "https://github.com/modough/senbooking/",
     },
     {
-        name: "Job IT",
+        name: "Marvel Universe",
         description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "A quiz app from the marvel characters, strictly made for marvel fans, from beginner to master.",
         tags: [
             {
-                name: "react",
+                name: "Reactjs",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "Firebase",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "Styled components",
                 color: "pink-text-gradient",
             },
-        ],
-        image: jobit,
-        source_code_link: "https://github.com/",
-    },
-    {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-        tags: [
             {
-                name: "nextjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "supabase",
-                color: "green-text-gradient",
-            },
-            {
-                name: "css",
-                color: "pink-text-gradient",
+                name: "Marvel API",
+                color: "orange-text-gradient",
             },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: projet7,
+        source_code_link: "https://github.com/modough/marvelquiz",
     },
 ];
 

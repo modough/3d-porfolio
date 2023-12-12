@@ -5,16 +5,20 @@ import Loader from "../Loader"
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 
 
-const Earth = () => {
-  const earth = useGLTF('./planet/scene.gltf');
-  return (
 
-    <primitive
-      object={earth.scene}
-      scale={2.5}
-      position-y={0}
-      rotation-y={0}
-    />
+const Earth = () => {
+  const earth = useGLTF('./game_ready/scene.gltf');
+  return (
+    <mesh>
+      <hemisphereLight intensity={3} groundColor="white" />
+      <pointLight intensity={3} />
+      <primitive
+        object={earth.scene}
+        scale={.60}
+        position={[1, -1, -.1]}
+        rotation={[-0.1, -1.5, 0.1]}
+      />
+    </mesh>
 
   )
 }
@@ -29,13 +33,13 @@ const EarthCanvas = () => {
       <Suspense fallback={<Loader />}>
         <OrbitControls
           autoRotate
-          enebleZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 4}
+          minPolarAngle={Math.PI / 4}
         />
         <Earth />
       </Suspense>
-
+      <Preload all />
     </Canvas>
   )
 }
